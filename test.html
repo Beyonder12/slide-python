@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful & Interactive Page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #495057;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .interactive-btn {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .interactive-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Interactive Page <i class="fas fa-heart"></i></h1>
+        <p>This page has a cleaner design and interactive elements for user engagement.</p>
+        <p>Do you love it? <a href="#">Tell us more</a>.</p>
+
+        <div class="interactive-btn" id="clickMeBtn">Click Me!</div>
+        
+        <div id="surpriseText" style="display:none; margin-top: 20px;">
+            <p>Thank you for clicking! Here's a surprise for you: <i class="fas fa-gift"></i></p>
+        </div>
+    </div>
+
+    <script>
+        // jQuery to show a surprise text when the button is clicked
+        $("#clickMeBtn").on("click", function() {
+            $("#surpriseText").fadeIn();
+        });
+    </script>
+
+</body>
+
+</html>
